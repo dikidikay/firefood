@@ -36,21 +36,21 @@ allLinks.forEach(function (link) {
 
     // Smooth scrolling animation with js, alternative for css scroll-behavior: smooth property
     /* scroll-behavior: smooth; */
-    // e.preventDefault();
-    // const href = link.getAttribute("href");
+    e.preventDefault();
+    const href = link.getAttribute("href");
 
-    // // Scroll back to top
-    // if (href === "#")
-    //   window.scrollTo({
-    //     top: 0,
-    //     behavior: "smooth",
-    //   });
+    // Scroll back to top
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
 
-    // // scroll to other links
-    // if (href !== "#" && href.startsWith("#")) {
-    //   const sectionEL = document.querySelector(href);
-    //   sectionEL.scrollIntoView({ behavior: "smooth" });
-    // }
+    // scroll to other links
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEL = document.querySelector(href);
+      sectionEL.scrollIntoView({ behavior: "smooth" });
+    }
   });
 });
 
